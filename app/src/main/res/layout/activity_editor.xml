@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:layout_margin="20dp"
+    tools:context=".EditorActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_fullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:boxBackgroundMode="outline"
+    >
+        <EditText
+            android:id="@+id/full_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Full Name"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_umur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layout_fullName"
+        app:boxBackgroundMode="outline"
+        android:layout_marginTop="20dp"
+        >
+        <EditText
+            android:id="@+id/umur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Age"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+<Button
+    android:id="@+id/btnData"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Save"
+    app:layout_constraintTop_toBottomOf="@id/layout_umur"
+    android:layout_margin="15dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
